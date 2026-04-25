@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  
+  --color-brand-primary: #FFFFFF;
+  --color-brand-secondary: #D4D4D8;
+  --color-brand-accent: #FFFFFF;
+  --color-dark-bg: #09090B;
+  --color-dark-section: #121214;
+  --color-dark-card: #18181B;
+  --color-dark-border: #27272A;
+  --color-text-primary: #FAFAFA;
+  --color-text-secondary: #A1A1AA;
+  --color-text-muted: #71717A;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-dark-bg text-text-primary font-sans;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-linear-to-r from-brand-primary to-brand-secondary;
+}
+
+.gradient-bg {
+  @apply bg-linear-to-br from-brand-primary to-brand-secondary;
+}
+
+.glass-card {
+  @apply bg-dark-card/50 backdrop-blur-md border border-dark-border/50;
+}
